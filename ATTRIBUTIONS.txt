@@ -8,53 +8,12 @@ commercial and non-commercial purposes, no permission needed).
 
 Individual photo sources:
 
-1. Diagnosing Architecture Demand for Text Classification
-   - File: imgs/projects/diagnosing-architecture.jpg
-   - Source: https://images.unsplash.com/photo-1555949963-aa79dcee981c
-   - Topics: Code, Architecture, Neural Networks
 
-2. Shield What Matters: Protection against Service-Time VLMs
-   - File: imgs/projects/shield-what-matters.jpg
-   - Source: https://images.unsplash.com/photo-1563986768609-322da13575f3
-   - Topics: Cybersecurity, Privacy, Shield & Lock Matrix
-
-3. How Does Attention Affect Sequential Models in Text Generation?
-   - File: imgs/projects/attention-sequential.jpg
-   - Source: https://images.unsplash.com/photo-1516259762381-22954d7d3ad2
-   - Topics: Code, Sequences, Algorithms
-
-4. Exploring Different GAN Architectures
-   - File: imgs/projects/gan-architectures.jpg
-   - Source: https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe
-   - Topics: Generative AI, Synthetic Visuals, Fluid Gradients
-
-5. Lightweight Classifiers vs Sequential Models for Spam Detection
-   - File: imgs/projects/spam-email-detector.jpg
-   - Source: https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5
-   - Topics: Digital Security, Matrix, Terminal
-
-6. Movie Review Sentiment Analysis
-   - File: imgs/projects/movie-review-sentiment.jpg
-   - Source: https://images.unsplash.com/photo-1489599849927-2ee91cede3ba
-   - Topics: Cinema, Film Theater, Reviews
-
-7. Room Status Monitoring and Booking System
+1. Room Status Monitoring and Booking System
    - File: imgs/projects/room-status-monitoring.jpg
    - Source: https://images.unsplash.com/photo-1517048676732-d65bc937f952
    - Topics: Meeting Room, Smart Campus, Collaboration Space
 
-8. Affordable Housing Analysis in Singapore
-   - File: imgs/projects/affordable-housing.jpg
-   - Source: https://images.unsplash.com/photo-1551288049-bebda4e38f71
-   - Topics: Data Visualizations, Analytics Dashboard
-
-9. File Conversion Website
-   - File: imgs/projects/file-conversion.jpg
-   - Source: https://images.unsplash.com/photo-1554224155-6726b3ff858f
-   - Topics: Documents, Workspace, Files
-
-10. Avatar Fallback Placeholder
-    - Source: https://images.unsplash.com/photo-1534528741775-53994a69daeb
 
 ================================================================================
 Thank you to all creators and photographers on Unsplash!
