@@ -71,15 +71,15 @@ const renderProjectCard = (project) => {
     }
     <div class="card-body">
       <h3 class="card-title">${escapeHtml(project.title)}</h3>
+      ${project.authors
+      ? `<p class="card-authors"><span class="authors-label">Authors:</span> ${escapeHtml(project.authors)}</p>`
+      : ""
+    }
       <div class="card-tags">
         ${tags.map((tag) => `<span class="badge">${escapeHtml(tag.trim())}</span>`).join("")}
       </div>
       ${project.description
       ? `<p class="card-description">${escapeHtml(project.description)}</p>`
-      : ""
-    }
-      ${project.authors
-      ? `<p class="card-authors"><span class="authors-label">Authors:</span> ${escapeHtml(project.authors)}</p>`
       : ""
     }
       <div class="card-footer-actions">
