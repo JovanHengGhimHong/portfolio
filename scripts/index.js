@@ -1,183 +1,315 @@
-const commands = [
-  {
-    name: "help",
-    alias: ['ls', 'h', 'dir'],
-    html: `
-     <p class="command m-1">whoami&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="res">Who is Jovan?</span></p>
-     <p class="command m-1">projects&nbsp;&nbsp;&nbsp;<span class="res">View completed and ongoing coding projects.</span></p>
-     <p class="command m-1">email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="res">Mailto my email.</span></p>
-     <p class="command m-1">help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="res">You know what this does.</span></p>
-     <p class="command m-1">clear&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="res">Clears the terminal.</span></p>
-    `,
-  },
-  {
-    name: "whoami",
-    alias: [],
-    html: `
-    <p class="res">Hi, I am Jovan 😊</p>
-      <p class="res">
-        I started coding when i was 13 and took an interest in it.
-      </p>
-      <p class="res">
-        I am currently a <b>first year student of Singapore Polytechnic</b> and am
-        studying for a <b>Diploma of Applied Artificial Intelligence and Analytics</b>
-      </p>
-      <p class="res">Some <strong>technical skills</strong> that i have</p>
-      <ul>
-        <li>
-          Javascript (focusing on full stack web development)
-          <ul>
-            <li>React</li>
-            <li>Express</li>
-            <li>Mysql</li>
-            <li>Mongodb</li>
-            <li>JWT</li>
-          </ul>
-        </li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>
-          Python
-          <ul>
-            <li>Pandas</li>
-            <li>Numpy</li>
-            <li>Matplotlib</li>
-            <li>Scikit-learn</li>
-          </ul>
-        </li>
-      </ul>
-    <h3 class="res">Experiences & Qualifications</h3>
-    <div class="card-container" id="qualifications-row">
-      <div class="card">
-        <div class="card-image"></div>
-        <img src="../imgs/Introduction_to_Cybersecurity_Badge20230728-28-upu8rm_page-0001.jpg" alt="" class="card-image" />
-        <div class="card-body">
-          <h1 class="card-title">Introduction to Cybersecurity</h1>
-          <h3 class="card-subtitle">Cisco ~ 2022</h3>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image"></div>
-        <img src="../imgs/Introduction_to_Data_Science_Badge20230728-28-7eecj0_page-0001.jpg" alt="" class="card-image" />
-        <div class="card-body">
-          <h1 class="card-title">Introduction to Data Science </h1>
-          <h3 class="card-subtitle">Cisco ~ 2022</h3>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image"></div>
-        <img src="../imgs/problem_solving_basic certificate_page-0001.jpg" alt="" class="card-image" />
-        <div class="card-body">
-          <h1 class="card-title">Problem Solving Basics</h1>
-          <h3 class="card-subtitle">Hackerrank ~ 2023</h3>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image"></div>
-        <img src="../imgs/maritime hackathon_page-0001.jpg" alt="" class="card-image" />
-        <div class="card-body">
-          <h1 class="card-title">Maritime Hackathon</h1>
-          <h3 class="card-subtitle">NUS ~ 2025</h3>
-        </div>
-      </div>
-    </div>
-    `,
-  },
-  {
-    name: "projects", //eventually convert this into cards
-    alias: ['p'],
-    html: `
-      <div class="card-container row">
-      <div class="card">
-        <div class="card-image veratu"></div>
-        <img src="../imgs/discord-bot-banner.png" alt="" class="card-image" />
-        <div class="card-body">
-          <h1 class="card-title">Discord Bot</h1>
-          <h3 class="card-subtitle">Discord.js|Javascript</h3>
-          <p class="card-description">
-            Built a <span class="res">Discord bot</span> to moderate users in
-            a server
-          </p>
-          <a href="https://github.com/stupidbutsmart/Veratu" target="_blank" class="card-btn d-inline">Repository</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image "></div>
-        <img src="../imgs/social-share-banner.webp" alt="" class="card-image" />
-        <div class="card-body">
-          <h1 class="card-title">File Convert Website</h1>
-          <h3 class="card-subtitle">ConvertApi|React</h3>
-          <p class="card-description">
-            Built a <span class="res">React website</span> 
-            for file convertion with <span class="res">Convertapi.</span>
-          </p>
-          <a href="https://github.com/stupidbutsmart/File-Converter-Website" target="_blank" class="card-btn d-inline"
-            >Repository</a
-          >
-          <a href="https://file-converter-ec1.pages.dev/" target="_blank" class="card-btn d-inline">Preview</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image veratu"></div>
-        <img src="../imgs/kpop-collective-banner.png" alt="" class="card-image" />
-        <div class="card-body">
-          <h1 class="card-title">Kpop Collective Store</h1>
-          <h3 class="card-subtitle">FullStack Web Development</h3>
-          <h3 class="card-subtitle">Express|React|Mysql|JWT</h3>
-          <h3 class="card-subtitle in-progress">**Work In Progress**</h3>
-        </div>
-      </div>
-      </div>
-    `,
-  },
-  {
-    name: "email",
-    alias: ['mail', 'gmail'],
-    html: `<p class="res">Opening Mailto: <a href="mailto:jovanhyc07@gmail.com" class="res">jovanhyc07@gmail.com</a></p>`,
-  },
-];
-const INVALID_COMMAND_HTML = `<p class="res">Command not found. For a list of commands enter <span class="command">'help'</span>.</p>`;
 const completedCommand = (cmdName) =>
-  `<p class="terminal-text">jovanhyc07@gmail.com: <span style="color: rgb(0, 233, 233)">~</span> ❯ <span class="typer">${cmdName}</span> </p>`;
+  `<p class="terminal-text terminal-cmd-entry">jovanhyc07@gmail.com: <span style="color: var(--cyan)">~</span> > <span class="typer">${cmdName}</span> </p>`;
 
 const terminal = document.getElementById("terminal");
 const responseContainer = document.getElementById("res-section");
 const typer = document.getElementById("typer");
+const terminalWindow = document.getElementById("terminal-window");
+const terminalWindowBody = document.getElementById("terminal-window-body");
 
-document.addEventListener("DOMContentLoaded", () => terminal.focus());
-document.addEventListener("click", () => terminal.focus());
+const escapeHtml = (value) =>
+  String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 
-terminal.addEventListener("keyup", () => {
-  typer.innerHTML = terminal.value + `<b class="cursor">&nbsp;</b>`;
-});
+const renderHelp = () => `
+  <p class="command m-1">whoami&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="res">Who is Jovan? Background & skills.</span></p>
+  <p class="command m-1">projects&nbsp;&nbsp;&nbsp;<span class="res">View completed and ongoing coding projects.</span></p>
+  <p class="command m-1">experience&nbsp;<span class="res">View work experience & education.</span></p>
+  <p class="command m-1">email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="res">Mailto my email.</span></p>
+  <p class="command m-1">help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="res">List all available commands.</span></p>
+  <p class="command m-1">clear&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="res">Clears the terminal screen.</span></p>
+`;
 
-terminal.addEventListener("keydown", (ev) => {
-  //handles commands
-  if (ev.key == "Enter") {
-    const cmdName = terminal.value.trim();
-    terminal.value = "";
-    typer.innerHTML = "";
-    responseContainer.innerHTML += completedCommand(cmdName);
-    if (cmdName.length < 1) return;
-    //special commands
-    if (["clear", "cls"].includes(cmdName)) {
-      responseContainer.innerHTML = "";
-      return;
+const renderCertificationCard = (certification) => `
+  <article
+    class="card clickable-card cert-card"
+    role="button"
+    tabindex="0"
+    data-modal-type="certification"
+    data-modal-id="${certification.id}"
+  >
+    <img src="${certification.image}" alt="${escapeHtml(
+  certification.title
+)} certificate" class="card-image" />
+    <div class="card-body">
+      <h4 class="card-title">${certification.title}</h4>
+      <p class="card-subtitle">${certification.subtitle}</p>
+    </div>
+  </article>
+`;
+
+const renderProjectLinks = (project) => {
+  const links = project?.links;
+  if (!links || typeof links !== "object" || Array.isArray(links)) return "";
+
+  return Object.entries(links)
+    .map(([label, href]) => {
+      if (!href) return "";
+      const externalAttrs = !String(href).startsWith("#")
+        ? ' target="_blank" rel="noopener noreferrer"'
+        : "";
+      return `<a href="${escapeHtml(href)}"${externalAttrs} class="card-btn d-inline">${escapeHtml(label)}</a>`;
+    })
+    .join("");
+};
+
+const renderProjectCard = (project) => {
+  const tags = Array.isArray(project.subtitle)
+    ? project.subtitle.filter(Boolean)
+    : (project.subtitle || "").split("|").filter(Boolean);
+  return `
+  <article class="card project-card">
+    ${project.image
+      ? `<div class="card-image-wrap">
+      <img src="${project.image}" alt="${escapeHtml(project.title)}" class="card-image" loading="lazy" />
+    </div>`
+      : ""
     }
-    //valid command
-    for (let cmd of commands) {
-      const aliases = [...cmd.alias, cmd.name]
-      if (aliases.includes(cmdName)) {
-        responseContainer.innerHTML += cmd.html;
-        if (cmdName == "email") {
-          const mail = document.querySelector("a");
-          mail.click();
+    <div class="card-body">
+      <h3 class="card-title">${escapeHtml(project.title)}</h3>
+      <div class="card-tags">
+        ${tags.map((tag) => `<span class="badge">${escapeHtml(tag.trim())}</span>`).join("")}
+      </div>
+      ${project.description
+      ? `<p class="card-description">${escapeHtml(project.description)}</p>`
+      : ""
+    }
+      ${project.authors
+      ? `<p class="card-authors"><span class="authors-label">Authors:</span> ${escapeHtml(project.authors)}</p>`
+      : ""
+    }
+      <div class="card-footer-actions">
+        <div class="card-links-left">
+          ${renderProjectLinks(project)}
+        </div>
+      </div>
+    </div>
+  </article>
+`;
+};
+
+const renderExperienceTimeline = () => `
+  <div class="timeline">
+    ${workExperiences
+    .map(
+      (experience) => `
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <p class="timeline-period">${experience.period}${experience.duration ? ` &middot; ${experience.duration}` : ""
+        }</p>
+              <h4 class="timeline-role">${experience.role}</h4>
+              <p class="timeline-company">${experience.company}${experience.type ? ` &middot; ${experience.type}` : ""
+        }</p>
+              <p class="timeline-location">${experience.location}</p>
+              ${experience.skills?.length
+          ? `<p class="timeline-skills">${experience.skills.join(
+            " | "
+          )}</p>`
+          : ""
         }
-        return;
-      }
-    }
-    //invalid command
-    responseContainer.innerHTML += INVALID_COMMAND_HTML;
+              ${(experience.details || [])
+          .map((detail) => `<p class="timeline-detail">${detail}</p>`)
+          .join("")}
+            </div>
+          </article>
+        `
+    )
+    .join("")}
+  </div>
+`;
+
+const renderWhoami = () => `
+  <p class="res">Hi, I am Jovan :)</p>
+  <p class="res">
+    I started coding when I was 13 and took a deep passion in it.
+  </p>
+  <p class="res">
+    I am currently studying for a <b>Diploma of Applied Artificial Intelligence and Analytics</b> at <b>Singapore Polytechnic</b> and interning as a <b>Research Assistant at A*STAR Center for Frontier AI Research (CFAR)</b>.
+  </p>
+  <p class="res">Core Technical Focus Areas:</p>
+  <ul>
+    <li>
+      Python & AI Research
+      <ul>
+        <li>PyTorch, Keras, Scikit-learn</li>
+        <li>Vision Models, Generation Models, Privacy</li>
+      </ul>
+    </li>
+    <li>
+      Full Stack Engineering
+      <ul>
+        <li>JavaScript / TypeScript, React, Next.js</li>
+        <li>Node.js, Express, MySQL, MongoDB, RESTful APIs</li>
+      </ul>
+    </li>
+  </ul>
+  ${renderExperienceTimeline()}
+  <h3 class="res">Certifications</h3>
+  <div class="card-container" id="qualifications-row">
+    ${certifications.map(renderCertificationCard).join("")}
+  </div>
+`;
+
+const renderProjects = () =>
+  projectSections
+    .map(
+      (section) => `
+        <h3 class="res section-inline-header">> ${section.title}</h3>
+        <div class="card-container row">
+          ${section.projects.map(renderProjectCard).join("")}
+        </div>
+      `
+    )
+    .join("");
+
+const commandRenderers = {
+  help: renderHelp,
+  whoami: renderWhoami,
+  projects: renderProjects,
+  experience: renderExperienceTimeline,
+  email: () =>
+    `<p class="res">Opening Mailto: <a href="mailto:jovanhyc07@gmail.com" class="res" id="mailto-link">jovanhyc07@gmail.com</a></p>`,
+};
+
+const commands = commandData.map((command) => ({
+  ...command,
+  render: commandRenderers[command.type],
+}));
+
+const history = [];
+let historyIndex = -1;
+
+const INVALID_COMMAND_HTML = `<p class="res">Command not found. For a list of commands enter <span class="command">'help'</span>.</p>`;
+
+const executeCommand = (rawCmd) => {
+  const cmdName = (rawCmd || "").trim().toLowerCase();
+  if (terminal) terminal.value = "";
+  if (typer) typer.innerHTML = `<b class="cursor">&nbsp;</b>`;
+
+  if (responseContainer) {
+    responseContainer.insertAdjacentHTML(
+      "beforeend",
+      completedCommand(escapeHtml(cmdName))
+    );
+  }
+
+  if (cmdName.length < 1) return;
+
+  history.push(cmdName);
+  historyIndex = history.length;
+
+  if (["clear", "cls"].includes(cmdName)) {
+    if (responseContainer) responseContainer.innerHTML = "";
     return;
   }
+
+  const command = commands.find((cmd) =>
+    [...cmd.alias, cmd.name].includes(cmdName)
+  );
+
+  if (command && responseContainer) {
+    const outputHtml = command.render();
+    responseContainer.insertAdjacentHTML(
+      "beforeend",
+      `<div class="terminal-cmd-output">${outputHtml}</div>`
+    );
+    if (command.name === "email") {
+      document.getElementById("mailto-link")?.click();
+    }
+  } else if (responseContainer) {
+    responseContainer.insertAdjacentHTML(
+      "beforeend",
+      `<div class="terminal-cmd-output">${INVALID_COMMAND_HTML}</div>`
+    );
+  }
+
+  if (terminalWindowBody) {
+    terminalWindowBody.scrollTop = terminalWindowBody.scrollHeight;
+  }
+};
+
+const updateTyper = () => {
+  if (typer && terminal) {
+    typer.innerHTML = `${escapeHtml(terminal.value)}<b class="cursor">&nbsp;</b>`;
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Smooth scroll for in-page hash links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (ev) => {
+      const targetId = anchor.getAttribute("href");
+      if (targetId && targetId !== "#") {
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          ev.preventDefault();
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+          history.pushState(null, "", targetId);
+        }
+      }
+    });
+  });
+
+  // Quick Command Chips Click
+  document.querySelectorAll(".cmd-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const cmd = chip.dataset.cmd;
+      if (cmd) {
+        executeCommand(cmd);
+        if (terminal) terminal.focus({ preventScroll: true });
+      }
+    });
+  });
+
+  // Focus terminal when clicking inside the terminal area
+  const terminalArea = document.getElementById("terminal-window") || document.getElementById("terminal-container");
+  if (terminalArea && terminal) {
+    terminalArea.addEventListener("click", (ev) => {
+      if (!ev.target.closest("a, button, [role='button']")) {
+        terminal.focus({ preventScroll: true });
+      }
+    });
+  }
 });
+
+if (terminal) {
+  terminal.addEventListener("input", updateTyper);
+  terminal.addEventListener("keyup", updateTyper);
+  terminal.addEventListener("paste", () => setTimeout(updateTyper, 0));
+
+  terminal.addEventListener("keydown", (ev) => {
+    if (ev.key === "Enter") {
+      ev.preventDefault();
+      executeCommand(terminal.value);
+      return;
+    }
+
+    if (ev.key === "ArrowUp") {
+      if (history.length < 1) return;
+      if (historyIndex > 0) historyIndex--;
+      const lastCmd = history[historyIndex] || "";
+      terminal.value = lastCmd;
+      updateTyper();
+    }
+
+    if (ev.key === "ArrowDown") {
+      if (history.length < 1) return;
+      if (historyIndex < history.length - 1) {
+        historyIndex++;
+        const nextCmd = history[historyIndex] || "";
+        terminal.value = nextCmd;
+        updateTyper();
+      } else {
+        historyIndex = history.length;
+        terminal.value = "";
+        updateTyper();
+      }
+    }
+  });
+}
+

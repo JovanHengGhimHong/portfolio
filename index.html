@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jovan Heng</title>
+    <meta
+      name="description"
+      content="Portfolio of Jovan Heng - AI / ML Researcher & Software Developer."
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/cards.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./scripts/data.js"></script>
+    <script defer src="./scripts/modal.js"></script>
+    <script defer src="./scripts/index.js"></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- 1. HERO / INTRO SECTION -->
+      <header class="section hero-viewport-section" id="hero">
+        <div class="hero-layout">
+          <!-- Headshot -->
+          <div class="hero-avatar-container">
+            <img
+              src="./imgs/profile/headshot.jpeg"
+              onerror="
+                this.onerror = null
+                this.src =
+                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'
+              "
+              alt="Jovan Heng"
+              class="hero-headshot"
+            />
+          </div>
+
+          <!-- Profile Info -->
+          <div class="hero-details">
+            <h1 class="hero-name">JOVAN HENG</h1>
+            <p class="hero-role">
+              Research Assistant Intern at A*STAR Centre for Frontier AI
+              Development
+            </p>
+            <p class="hero-bio"></p>
+            <!-- <p class="hero-bio">
+              Building and researching systems around multimodal AI, computer
+              vision, privacy, and machine learning.
+            </p> -->
+            <!-- <p class="hero-bio">
+              Interests in <strong>AI Safety</strong>,
+              <strong>Generative AI</strong> and
+              <strong>Application of AI</strong> in Real-World Systems.
+            </p> -->
+
+            <div class="hero-meta">
+              <!-- <span>A*STAR Research Intern</span>
+              <span class="meta-separator">&bull;</span> -->
+              <span>Singapore Polytechnic</span>
+              <span class="meta-separator">&bull;</span>
+              <span>Singapore</span>
+            </div>
+
+            <div class="hero-actions">
+              <a
+                href="./Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-solid btn-with-icon"
+                id="resume-btn"
+              >
+                <svg
+                  class="btn-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  ></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>Resume</span>
+              </a>
+
+              <div class="hero-socials" id="hero-socials">
+                <a
+                  href="https://github.com/JovanHengGhimHong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon-btn"
+                  aria-label="GitHub Profile"
+                  title="GitHub"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/jovan-heng-ghim-hong/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon-btn"
+                  aria-label="LinkedIn Profile"
+                  title="LinkedIn"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    ></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+
+                <a
+                  href="mailto:jovanhyc07@gmail.com"
+                  class="social-icon-btn"
+                  aria-label="Send Email"
+                  title="Email"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 2. EXPERIENCE & EDUCATION SECTION -->
+      <section class="section viewport-section" id="experience">
+        <div class="section-header">
+          <h2 class="section-title">EXPERIENCE &amp; EDUCATION</h2>
+          <p class="section-subtitle">
+            Research internships, engineering roles, and academic foundations.
+          </p>
+        </div>
+
+        <div class="experience-showcase-grid">
+          <div class="experience-showcase-col">
+            <h3 class="subsection-title">&gt; Work Experience</h3>
+            <div id="static-work-timeline">
+              <div class="timeline">
+                <article class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <div class="timeline-header-info">
+                        <p class="timeline-period">Mar 2026 - Present</p>
+                        <h4 class="timeline-role">Research Intern</h4>
+                        <p class="timeline-company">
+                          A*STAR - Agency for Science, Technology and Research
+                          &middot; Internship
+                        </p>
+                      </div>
+                      <div class="timeline-logo-wrap">
+                        <img
+                          src="./imgs/logos/astar-logo.png"
+                          alt="A*STAR logo"
+                          class="timeline-logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <p class="timeline-location">Hybrid</p>
+                    <p class="timeline-detail">
+                      Conducting research in AI/ML systems and model evaluation.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <div class="timeline-header-info">
+                        <p class="timeline-period">Feb 2026 - Present</p>
+                        <h4 class="timeline-role">Software Developer</h4>
+                        <p class="timeline-company">
+                          CYBERCORE DEVELOPMENT PTE LTD &middot; Part-time
+                        </p>
+                      </div>
+                    </div>
+                    <p class="timeline-location">Remote</p>
+                    <p class="timeline-skills">Next.js | React.js</p>
+                    <p class="timeline-detail">
+                      Developing and optimizing web applications and frontend
+                      architectures.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-showcase-col">
+            <h3 class="subsection-title">&gt; Education</h3>
+            <div id="static-education-timeline">
+              <div class="timeline">
+                <article class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <div class="timeline-header-info">
+                        <p class="timeline-period">2024 - 2027</p>
+                        <h4 class="timeline-role">
+                          Diploma in Applied AI &amp; Analytics
+                        </h4>
+                        <p class="timeline-company">
+                          Singapore Polytechnic &middot; Education
+                        </p>
+                      </div>
+                      <div class="timeline-logo-wrap">
+                        <img
+                          src="./imgs/logos/sp-logo.png"
+                          alt="Singapore Polytechnic logo"
+                          class="timeline-logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <p class="timeline-location">Singapore</p>
+                    <p class="timeline-skills">
+                      Python | PyTorch | Scikit-Learn | Data Analytics
+                    </p>
+                    <p class="timeline-detail">
+                      Specializing in Machine Learning, Deep Learning,
+                      Statistical Analysis, and Computer Vision.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <div class="timeline-header-info">
+                        <p class="timeline-period">2020 - 2023</p>
+                        <h4 class="timeline-role">Singapore O'Levels</h4>
+                        <p class="timeline-company">
+                          Maris Stella High School &middot; Education
+                        </p>
+                      </div>
+                      <div class="timeline-logo-wrap">
+                        <img
+                          src="./imgs/logos/mshs-crest.svg"
+                          alt="Maris Stella High School crest"
+                          class="timeline-logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <p class="timeline-location">Singapore</p>
+                    <ul class="timeline-detail-list">
+                      <li>L1R5: Net 7</li>
+                      <li>L1R4: Net 5</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. RECENT WORKS SECTION (Full viewport showcase) -->
+      <section class="section viewport-section" id="projects">
+        <div class="section-header">
+          <h2 class="section-title">RECENT WORKS</h2>
+        </div>
+
+        <div class="selected-projects-showcase" id="selected-projects-grid">
+          <article class="detailed-project-item">
+            <div class="detailed-project-grid">
+              <div class="detailed-project-media">
+                <div class="project-media-frame project-media-diagram">
+                  <img
+                    src="./imgs/projects/wsdm_train_or_read.png"
+                    alt="Overview diagram for Trained On or Read? WSDM 2027 submission"
+                    class="project-showcase-img"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="detailed-project-info">
+                <h3 class="detailed-project-title">
+                  Trained On or Read? How Attackers Use Web Images Determines
+                  Whether Preprocessing Breaks Adversarial Protection
+                </h3>
+                <div class="card-tags media-tags">
+                  <span class="badge"
+                    >Submitted to WSDM 2027 Short Paper Track</span
+                  >
+                </div>
+                <p class="detailed-project-desc">
+                  Comparing how attacker preprocessing on perturbation protected
+                  images holds ups against generation and inference downstream
+                  tasks.
+                </p>
+                <p class="detailed-project-authors">
+                  <span class="authors-label">Authors:</span> Anonymized Authors
+                </p>
+
+                <div class="detailed-project-actions">
+                  <div class="project-links-group">
+                    <a href="#" class="card-btn d-inline">PDF</a>
+                    <a href="#" class="card-btn d-inline">Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="detailed-project-item">
+            <div class="detailed-project-grid">
+              <div class="detailed-project-media">
+                <div class="project-media-frame project-media-diagram">
+                  <img
+                    src="./imgs/projects/iclr_service_adversary.png"
+                    alt="Overview diagram for When the Service Is the Adversary ICLR 2027 submission"
+                    class="project-showcase-img"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="detailed-project-info">
+                <h3 class="detailed-project-title">
+                  When the Service Is the Adversary: Cue-Driven Editing Against
+                  VLM Attribute Inference
+                </h3>
+                <div class="card-tags media-tags">
+                  <span class="badge">Submitted to ICLR 2027</span>
+                </div>
+                <p class="detailed-project-desc">
+                  Protecting sensitive user images from unauthorized private
+                  attribute inference by multimodal reasoning models (VLMs) at
+                  service time while preserving core visual utility for
+                  downstream tasks.
+                </p>
+                <p class="detailed-project-authors">
+                  <span class="authors-label">Authors:</span> Anonymized Authors
+                </p>
+
+                <div class="detailed-project-actions">
+                  <div class="project-links-group">
+                    <a href="#" class="card-btn d-inline">PDF</a>
+                    <a href="#" class="card-btn d-inline">Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="detailed-project-item">
+            <div class="detailed-project-grid">
+              <div class="detailed-project-media">
+                <div class="project-media-frame project-media-diagram">
+                  <img
+                    src="./imgs/projects/SafeAttention_Unet.png"
+                    alt="SafeAttention U-Net diagram for Unsafe2Safe Unofficial Model Implementation"
+                    class="project-showcase-img"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="detailed-project-info">
+                <h3 class="detailed-project-title">
+                  Unsafe2Safe Unofficial Model Implementation
+                </h3>
+                <div class="card-tags media-tags">
+                  <span class="badge">Diffusion Models</span>
+                  <span class="badge">Visual Privacy</span>
+                </div>
+                <p class="detailed-project-desc">
+                  Unofficial reproduction of Unsafe2Safe's safe attention module
+                  and training dataset to fine-tune an image editing model that
+                  is focused on privacy anonymization
+                </p>
+
+                <div class="detailed-project-actions">
+                  <div class="project-links-group">
+                    <a
+                      href="https://arxiv.org/pdf/2603.28605"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="card-btn d-inline"
+                      >Original Paper</a
+                    >
+                    <a
+                      href="https://github.com/JovanHengGhimHong/Unsafe2Safe_Unofficial_Reproduction"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="card-btn d-inline"
+                      >Code</a
+                    >
+                    <a
+                      href="https://huggingface.co/JovanHengGhimHong/unsafe2safe_checkpoint"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="card-btn d-inline"
+                      >Weights</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. CERTIFICATIONS SECTION -->
+      <section class="section viewport-section" id="certifications">
+        <div class="section-header">
+          <h2 class="section-title">CERTIFICATIONS</h2>
+          <p class="section-subtitle">
+            Click on any certificate to view high-resolution credential:
+          </p>
+        </div>
+
+        <div
+          class="card-container certifications-grid"
+          id="static-certifications-grid"
+        >
+          <article
+            class="card clickable-card cert-card"
+            role="button"
+            tabindex="0"
+            data-modal-type="certification"
+            data-modal-id="intro-cybersecurity"
+          >
+            <img
+              src="./imgs/certifications/Introduction_to_Cybersecurity_Badge20230728-28-upu8rm_page-0001.jpg"
+              alt="Introduction to Cybersecurity certificate"
+              class="card-image"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Introduction to Cybersecurity</h4>
+              <p class="card-subtitle">Cisco ~ 2022</p>
+            </div>
+          </article>
+
+          <article
+            class="card clickable-card cert-card"
+            role="button"
+            tabindex="0"
+            data-modal-type="certification"
+            data-modal-id="intro-data-science"
+          >
+            <img
+              src="./imgs/certifications/Introduction_to_Data_Science_Badge20230728-28-7eecj0_page-0001.jpg"
+              alt="Introduction to Data Science certificate"
+              class="card-image"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Introduction to Data Science</h4>
+              <p class="card-subtitle">Cisco ~ 2022</p>
+            </div>
+          </article>
+
+          <article
+            class="card clickable-card cert-card"
+            role="button"
+            tabindex="0"
+            data-modal-type="certification"
+            data-modal-id="problem-solving-basics"
+          >
+            <img
+              src="./imgs/certifications/problem_solving_basic certificate_page-0001.jpg"
+              alt="Problem Solving Basics certificate"
+              class="card-image"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Problem Solving Basics</h4>
+              <p class="card-subtitle">Hackerrank ~ 2023</p>
+            </div>
+          </article>
+
+          <article
+            class="card clickable-card cert-card"
+            role="button"
+            tabindex="0"
+            data-modal-type="certification"
+            data-modal-id="maritime-hackathon"
+          >
+            <img
+              src="./imgs/certifications/maritime hackathon_page-0001.jpg"
+              alt="Maritime Hackathon certificate"
+              class="card-image"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Maritime Hackathon</h4>
+              <p class="card-subtitle">NUS ~ 2025</p>
+            </div>
+          </article>
+
+          <article
+            class="card clickable-card cert-card"
+            role="button"
+            tabindex="0"
+            data-modal-type="certification"
+            data-modal-id="supervised-learning-scikit-learn"
+          >
+            <img
+              src="./imgs/certifications/Supervised Learning Scikit certificate-1.png"
+              alt="Supervised Learning with scikit-learn certificate"
+              class="card-image"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Supervised Learning with scikit-learn</h4>
+              <p class="card-subtitle">DataCamp ~ 2024</p>
+            </div>
+          </article>
+
+          <article
+            class="card clickable-card cert-card"
+            role="button"
+            tabindex="0"
+            data-modal-type="certification"
+            data-modal-id="deep-learning-keras"
+          >
+            <img
+              src="./imgs/certifications/Deep Learning Keras-1.png"
+              alt="Introduction to Deep Learning with Keras certificate"
+              class="card-image"
+            />
+            <div class="card-body">
+              <h4 class="card-title">
+                Introduction to Deep Learning with Keras
+              </h4>
+              <p class="card-subtitle">DataCamp ~ 2025</p>
+            </div>
+          </article>
+
+          <article
+            class="card clickable-card cert-card"
+            role="button"
+            tabindex="0"
+            data-modal-type="certification"
+            data-modal-id="generative-ai-concepts"
+          >
+            <img
+              src="./imgs/certifications/GAN-1.png"
+              alt="Generative AI Concepts certificate"
+              class="card-image"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Generative AI Concepts</h4>
+              <p class="card-subtitle">DataCamp ~ 2025</p>
+            </div>
+          </article>
+
+          <article
+            class="card clickable-card cert-card"
+            role="button"
+            tabindex="0"
+            data-modal-type="certification"
+            data-modal-id="plotly-data-visualization"
+          >
+            <img
+              src="./imgs/certifications/Intro to Data Viz with Plotly-1.png"
+              alt="Introduction to Data Visualization with Plotly in Python certificate"
+              class="card-image"
+            />
+            <div class="card-body">
+              <h4 class="card-title">
+                Introduction to Data Visualization with Plotly in Python
+              </h4>
+              <p class="card-subtitle">DataCamp ~ 2025</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. FIND OUT MORE / INTERACTIVE TERMINAL SECTION -->
+      <section
+        class="section viewport-section terminal-section-wrapper"
+        id="terminal-container"
+      >
+        <div class="ascii-divider">
+          <span
+            >═════════════════════════════════════════════════════════════════════════</span
+          >
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title">FIND OUT MORE</h2>
+          <p class="section-quote">"Want to know more about me?"</p>
+        </div>
+
+        <!-- Direct Terminal Area (No bounding box, no ASCII banner) -->
+        <div class="terminal-direct-area" id="terminal-window">
+          <p class="terminal-hint-text">
+            Type <span class="command">'help'</span> to get a list of commands,
+            or click any quick action below:
+          </p>
+
+          <div class="cmd-chips-container">
+            <button type="button" class="cmd-chip" data-cmd="help">help</button>
+            <button type="button" class="cmd-chip" data-cmd="whoami">
+              whoami
+            </button>
+            <button type="button" class="cmd-chip" data-cmd="projects">
+              projects
+            </button>
+            <button type="button" class="cmd-chip" data-cmd="experience">
+              experience
+            </button>
+            <button type="button" class="cmd-chip" data-cmd="email">
+              email
+            </button>
+            <button type="button" class="cmd-chip" data-cmd="clear">
+              clear
+            </button>
+          </div>
+
+          <div id="res-section"></div>
+
+          <div id="terminal-section">
+            <span class="terminal-text"
+              >jovanhyc07@gmail.com:
+              <span style="color: var(--cyan)">~</span> ❯</span
+            >
+            <p style="display: inline">
+              <span id="typer">
+                <b class="cursor">&nbsp;</b>
+              </span>
+            </p>
+            <textarea
+              name="terminal"
+              id="terminal"
+              rows="1"
+              aria-label="Terminal Input"
+              autocapitalize="off"
+              autocomplete="off"
+              spellcheck="false"
+            ></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-content">
+          <span class="footer-name">Jovan Heng</span>
+          <span class="footer-sep">&bull;</span>
+          <a
+            href="./Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-link"
+            >Resume</a
+          >
+          <span class="footer-socials" id="footer-socials">
+            <span class="footer-sep">&bull;</span>
+            <a
+              href="https://github.com/JovanHengGhimHong"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+              >GitHub</a
+            >
+            <span class="footer-sep">&bull;</span>
+            <a
+              href="https://www.linkedin.com/in/jovan-heng-ghim-hong/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+              >LinkedIn</a
+            >
+            <span class="footer-sep">&bull;</span>
+            <a href="mailto:jovanhyc07@gmail.com" class="footer-link">Email</a>
+          </span>
+        </p>
+        <p class="footer-credits">
+          Images sourced from
+          <a
+            href="https://unsplash.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-credit-link"
+            >Unsplash</a
+          >
+          &bull;
+          <a
+            href="./ATTRIBUTIONS.txt"
+            target="_blank"
+            class="footer-credit-link"
+            >Image Attributions &amp; Sources</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <!-- Modal for Enlarged Image Previews -->
+    <div class="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-modal-close></div>
+      <section
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Enlarged image preview"
+      >
+        <button
+          class="modal-close"
+          type="button"
+          aria-label="Close modal"
+          data-modal-close
+        >
+          &times;
+        </button>
+        <img src="" alt="" class="modal-image" />
+      </section>
+    </div>
+  </body>
+</html>
