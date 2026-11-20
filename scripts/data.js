@@ -1,35 +1,5 @@
 const certifications = [
   {
-    id: "intro-cybersecurity",
-    title: "Introduction to Cybersecurity",
-    subtitle: "Cisco ~ 2022",
-    image: "./imgs/certifications/Introduction_to_Cybersecurity_Badge20230728-28-upu8rm_page-0001.jpg",
-  },
-  {
-    id: "intro-data-science",
-    title: "Introduction to Data Science",
-    subtitle: "Cisco ~ 2022",
-    image: "./imgs/certifications/Introduction_to_Data_Science_Badge20230728-28-7eecj0_page-0001.jpg",
-  },
-  {
-    id: "problem-solving-basics",
-    title: "Problem Solving Basics",
-    subtitle: "Hackerrank ~ 2023",
-    image: "./imgs/certifications/problem_solving_basic certificate_page-0001.jpg",
-  },
-  {
-    id: "maritime-hackathon",
-    title: "Maritime Hackathon",
-    subtitle: "NUS ~ 2025",
-    image: "./imgs/certifications/maritime hackathon_page-0001.jpg",
-  },
-  {
-    id: "supervised-learning-scikit-learn",
-    title: "Supervised Learning with scikit-learn",
-    subtitle: "DataCamp ~ 2024",
-    image: "./imgs/certifications/Supervised Learning Scikit certificate-1.png",
-  },
-  {
     id: "deep-learning-keras",
     title: "Introduction to Deep Learning with Keras",
     subtitle: "DataCamp ~ 2025",
@@ -46,6 +16,36 @@ const certifications = [
     title: "Introduction to Data Visualization with Plotly in Python",
     subtitle: "DataCamp ~ 2025",
     image: "./imgs/certifications/Intro to Data Viz with Plotly-1.png",
+  },
+  {
+    id: "supervised-learning-scikit-learn",
+    title: "Supervised Learning with scikit-learn",
+    subtitle: "DataCamp ~ 2024",
+    image: "./imgs/certifications/Supervised Learning Scikit certificate-1.png",
+  },
+  {
+    id: "maritime-hackathon",
+    title: "Maritime Hackathon",
+    subtitle: "NUS ~ 2025",
+    image: "./imgs/certifications/maritime hackathon_page-0001.jpg",
+  },
+  {
+    id: "problem-solving-basics",
+    title: "Problem Solving Basics",
+    subtitle: "Hackerrank ~ 2023",
+    image: "./imgs/certifications/problem_solving_basic certificate_page-0001.jpg",
+  },
+  {
+    id: "intro-data-science",
+    title: "Introduction to Data Science",
+    subtitle: "Cisco ~ 2022",
+    image: "./imgs/certifications/Introduction_to_Data_Science_Badge20230728-28-7eecj0_page-0001.jpg",
+  },
+  {
+    id: "intro-cybersecurity",
+    title: "Introduction to Cybersecurity",
+    subtitle: "Cisco ~ 2022",
+    image: "./imgs/certifications/Introduction_to_Cybersecurity_Badge20230728-28-upu8rm_page-0001.jpg",
   },
 ];
 

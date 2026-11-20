@@ -493,6 +493,22 @@
   gap: 20px;
 }
 
+.cert-card-extra.is-hidden {
+  display: none;
+}
+
+.certifications-more-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.certifications-more-btn {
+  min-width: 120px;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .section-inline-header {
   color: var(--orange);
   margin: 16px 0 8px;

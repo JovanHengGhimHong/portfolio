@@ -266,6 +266,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Certifications 'More' Toggle (shows/hides pre-loaded static certificates)
+  const certsMoreBtn = document.getElementById("certifications-more-btn");
+  const extraCertCards = document.querySelectorAll(".cert-card-extra");
+  if (certsMoreBtn && extraCertCards.length > 0) {
+    certsMoreBtn.addEventListener("click", () => {
+      const isExpanded = certsMoreBtn.getAttribute("aria-expanded") === "true";
+      const nextExpanded = !isExpanded;
+      extraCertCards.forEach((card) => {
+        card.classList.toggle("is-hidden", !nextExpanded);
+      });
+      certsMoreBtn.setAttribute("aria-expanded", String(nextExpanded));
+      certsMoreBtn.innerHTML = nextExpanded ? "Less &uarr;" : "More &darr;";
+    });
+  }
+
   // Focus terminal when clicking inside the terminal area
   const terminalArea = document.getElementById("terminal-window") || document.getElementById("terminal-container");
   if (terminalArea && terminal) {
